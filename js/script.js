@@ -20,7 +20,7 @@ function calculate(){
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Semua data perlu diisi!";
     } else if (umur.value <= 0 || berat.value <= 0 || tinggi.value <= 0) {
         modal.style.display = "block";
-        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Nilai data tidak boleh 0!";
+        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Nilai data harus lebih besar dari 0!";
     } else if (pria.checked==false && wanita.checked==false) {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Pilih gender anda!";
