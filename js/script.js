@@ -14,30 +14,37 @@ var conta = document.getElementById("containerPerhitungan")
 
 // Submit button function
 // Validasi ada tidaknya data dalam input
-function calculate(){
-    if (umur.value=='' && berat.value=='' && tinggi.value=='' && (pria.checked==false && wanita.checked==false)) {
+function calculate() {
+    if (umur.value === '' && berat.value === '' && tinggi.value === '' && (pria.checked === false && wanita.checked === false)) {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Semua data perlu diisi!";
-    } else if (pria.checked==false && wanita.checked==false) {
+    } else if (pria.checked === false && wanita.checked === false) {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Pilih gender anda!";
+    } else if (berat.value === '') {
+        modal.style.display = "block";
+        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Berat badan perlu diisi!";
     } else if (berat.value <= 0) {
         modal.style.display = "block";
-        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Berat badan perlu diisi!";  
-    } else if (umur.value=='') {
+        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Berat badan harus lebih dari 0!";
+    } else if (umur.value === '') {
         modal.style.display = "block";
-        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Usia perlu diisi!";    
+        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Usia perlu diisi!";
     } else if (umur.value < 18) {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Usia perlu 18 tahun ke atas!";
-    } else if (tinggi.value <= 0) {
+    } else if (tinggi.value === '') {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Tinggi badan perlu diisi!";
+    } else if (tinggi.value <= 0) {
+        modal.style.display = "block";
+        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Tinggi badan harus lebih dari 0!";
     } else {
         hitungBmi();
-        hsl.scrollIntoView({ behavior: "smooth"})
+        hsl.scrollIntoView({ behavior: "smooth" });
     }
 }
+
 
 // Perhitungan BMI
 function hitungBmi(){
