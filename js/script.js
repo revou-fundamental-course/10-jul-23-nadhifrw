@@ -21,16 +21,16 @@ function calculate(){
     } else if (pria.checked==false && wanita.checked==false) {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Pilih gender anda!";
-    } else if (berat.value=='') {
+    } else if (berat.value==='') {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Berat badan perlu diisi!";  
-    } else if (umur.value=='') {
+    } else if (umur.value==='') {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Usia perlu diisi!";    
     } else if (umur.value < 18) {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Usia perlu 18 tahun ke atas!";
-    } else if (tinggi.value=='') {
+    } else if (tinggi.value==='') {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Tinggi badan perlu diisi!";
     } else if (umur.value <= 0 || berat.value <= 0 || tinggi.value <= 0) {
