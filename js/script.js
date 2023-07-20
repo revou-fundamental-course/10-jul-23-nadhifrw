@@ -15,7 +15,7 @@ var conta = document.getElementById("containerPerhitungan")
 // Submit button function
 // Validasi ada tidaknya data dalam input
 function calculate(){
-    if (umur.value=='' || berat.value=='' || tinggi.value=='' || (pria.checked==false && wanita.checked==false)) {
+    if (umur.value=='' && berat.value=='' && tinggi.value=='' && (pria.checked==false && wanita.checked==false)) {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Semua data perlu diisi!";
     } else if (umur.value < 18) {
