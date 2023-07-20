@@ -27,7 +27,7 @@ function calculate(){
     } else if (berat.value==='') {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Berat badan perlu diisi!";  
-    } else if (umur==='') {
+    } else if (umur.value==='') {
         modal.style.display = "block";
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Usia perlu diisi!";    
     } else if (umur.value < 18) {
