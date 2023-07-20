@@ -20,7 +20,19 @@ function calculate(){
         modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Semua data perlu diisi!";
     } else if (umur.value < 18) {
         modal.style.display = "block";
-        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Umur perlu 18 tahun ke atas!";
+        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Usia perlu 18 tahun ke atas!";
+    } else if (umur=='') {
+        modal.style.display = "block";
+        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Usia perlu diisi!";
+    } else if (berat.value=='') {
+        modal.style.display = "block";
+        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Berat badan perlu diisi!";
+    } else if (tinggi.value=='') {
+        modal.style.display = "block";
+        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Tinggi badan perlu diisi!";
+    } else if (pria.checked==false && wanita.checked==false) {
+        modal.style.display = "block";
+        modalText.innerHTML = "<b>PERHATIAN!<b/>" + "<br/>" + "Pilih gender anda!";
     } else {
         hitungBmi();
         hsl.scrollIntoView({ behavior: "smooth"})
